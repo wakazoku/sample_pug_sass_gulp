@@ -1,14 +1,18 @@
-div p {
+article p {
   font-weight: bold;
-  color: red;
+  color: #525252;
 }
 
-div h1 {
+article h1 {
   font-size: 20px;
   color: blue;
   padding: 0px 10px 10px 5px;
 }
 
-h1 {
-  color: #525252;
+article a {
+  color: green;
+}
+
+article section .container {
+  font-weight: lighter;
 }

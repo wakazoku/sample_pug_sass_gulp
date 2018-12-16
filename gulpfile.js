@@ -1,29 +1,38 @@
-// const gulp = require("gulp");
-const { src, dest, watch } = require("gulp");
-// Sassをコンパイルするプラグインの読み込み
+const gulp = require("gulp");
 const sass = require("gulp-sass");
+const pug = require('gulp-pug');
 
 function css() {
   return (
-    src("src/sass/*.+(scss|sass)")
-      // Sassのコンパイルを実行
-      .pipe(
-        sass({
-          outputStyle: "expanded"
-        })
-          // Sassのコンパイルエラーを表示
-          // (これがないと自動的に止まってしまう)
-          .on("error", sass.logError)
-      )
-      // cssフォルダー以下に保存
-      .pipe(dest("dist/css"))
+    gulp.src("src/sass/**/**//*.+(scss|sass)")
+    .pipe(
+      sass({
+        outputStyle: "expanded"
+      })
+      // Sassのコンパイルエラーを表示
+      .on("error", sass.logError)
+    )
+    .pipe(gulp.dest("dist/css"))
   );
 }
 
-function watchCss() {
-  watch("src/sass/*.+(scss|sass)", css);
+function html() {
+  return gulp.src("src/pug/**/**/*.pug")
+    .pipe(pug({
+      pretty: true // @fixme Deprecatedなので基本的には外す
+    }))
+    .pipe(gulp.dest("dist/html"))
 }
 
-exports.default = css;
+function watchHtml() {
+  gulp.watch("src/pug/**/**/*.pug", html);
+}
+
+function watchCss() {
+  gulp.watch("src/sass/**/**//*.+(scss|sass)", css);
+}
+
+exports.default = gulp.parallel(css, html);
+exports.html = html;
 exports.css = css;
-exports.watch = watchCss;
+exports.watch = gulp.parallel(watchHtml, watchCss);;
