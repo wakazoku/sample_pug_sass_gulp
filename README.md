@@ -79,7 +79,7 @@ npm install -g browser-sync
 `dist`をルートディレクトリにし、配下のファイルをwatchするオプションをつけてBrowsersyncを起動する。
 
 ```bash
-browser-sync start --server "./dist/" --files "./dist/*
+browser-sync start --server "./dist/" --files "./dist/*"
 ```
 
 こんな感じでサーバーが起動する。
