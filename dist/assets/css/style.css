@@ -1,18 +1,21 @@
 article p {
   font-weight: bold;
-  color: #525252;
+  color: orange;
 }
 
 article h1 {
-  font-size: 20px;
+  font-size: 30px;
   color: blue;
   padding: 0px 10px 10px 5px;
 }
 
 article a {
   color: green;
+  padding: 10px;
 }
 
-article section .container {
+article section.container {
   font-weight: lighter;
+  background-color: blanchedalmond;
+  border-top: 1px solid blueviolet;
 }
