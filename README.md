@@ -20,7 +20,8 @@ https://gulpjs.com/
 
 ### ・タスクについて
 
-基本はこれ。その場でコンパイルされる。
+基本はこれ。  
+その場でコンパイルされる。
 
 ```bash
 gulp
@@ -75,10 +76,10 @@ npm install -g browser-sync
 
 ### 2. 起動
 
-`dist`をルートディレクトリにし、配下のファイルをwatchするオプションをつけてBrowsersyncを起動する。
+`dist`をルートディレクトリにし、配下のファイルをwatchするオプションをつけてBrowsersyncを起動する。
 
 ```bash
-browser-sync start --server "./dist/" --files "./dist/*
+browser-sync start --server "./dist/" --files "./dist/*"
 ```
 
 こんな感じでサーバーが起動する。
