@@ -99,3 +99,9 @@ $  browser-sync start --server "./dist/" --files "./dist/*"
 `gulp watch`タスクを並行して起動させておくと変更が随時反映されるはず。  
 起動コマンドやオプションは下記を参考にされたし。  
 https://www.browsersync.io/docs/command-line
+
+
+## おまけ
+Netlifyで公開してみた。  
+簡単にできるのでおすすめ  
+https://sample-pug-sass-gulp.netlify.com/
