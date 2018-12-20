@@ -2,9 +2,10 @@ const gulp = require("gulp");
 const sass = require("gulp-sass");
 const pug = require("gulp-pug");
 
+// @todo Lint、エラーハンドリングとかする
 function css() {
   return gulp
-    .src("src/assets/sass/**/**//*.+(scss|sass)")
+    .src("src/assets/sass/**/**/*.+(scss|sass)")
     .pipe(
       sass({
         outputStyle: "expanded"
@@ -15,6 +16,7 @@ function css() {
     .pipe(gulp.dest("dist/assets/css"));
 }
 
+// @todo Lint、エラーハンドリングとかする
 function html() {
   return gulp
     .src("src/assets/pug/**/**/*.pug")
@@ -26,11 +28,24 @@ function html() {
     .pipe(gulp.dest("dist"));
 }
 
-function watch() {
-  gulp.watch("src/assets/", gulp.parallel(css, html));
+// @todo Lint、エラーハンドリングとかする
+function javascript() {
+  return gulp.src("src/assets/js/**/**/*.js").pipe(gulp.dest("dist/assets/js"));
 }
 
-exports.default = gulp.parallel(css, html);
+function vendor() {
+  return gulp
+    .src("src/assets/vendor//**/**/*.+(js|css)")
+    .pipe(gulp.dest("dist/assets/vendor"));
+}
+
+function watch() {
+  gulp.watch("src/assets/", gulp.parallel(css, html, javascript, vendor));
+}
+
+exports.default = gulp.parallel(css, html, javascript, vendor);
 exports.html = html;
 exports.css = css;
+exports.js = javascript;
+exports.vendor = vendor;
 exports.watch = watch;

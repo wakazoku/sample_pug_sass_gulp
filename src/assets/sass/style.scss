@@ -1,36 +1,18 @@
 $fontColor: orange;
 
-article {
-  p {
-    font-weight: bold;
-    color: $fontColor;
-  }
-
-  h1 {
-    font-size: 30px;
-    color: blue;
-    padding: 0px 10px 10px 5px;
-  }
-
-  a {
-    color: green;
-    padding: 10px;
-  }
-
-  section.container {
-    font-weight: lighter;
-    background-color: blanchedalmond;
-    border-top: 1px solid blueviolet;
-  }
-}
-
 section.black {
   background-color: black;
   color: white;
 }
 
+nav.header {
+  // padding: 0rem 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 figure {
-  margin: 0 0 30px 0;
   img {
     display: block;
     width: 200px;
@@ -38,9 +20,9 @@ figure {
     background: red;
     margin: 10px;
   }
-  .logo {
+  img.logo {
     width: 200px;
-    height: 100px;
+    height: 50px;
     background: orange;
   }
 }

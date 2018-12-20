@@ -4,42 +4,52 @@ html(lang="ja")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1")
     title テストサイト
-    link(href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css", rel='stylesheet')
+    link(href="/assets/vendor/css/bulma.min.css", rel='stylesheet')
     link(href="https://use.fontawesome.com/releases/v5.3.1/js/all.js", rel='stylesheet')
     link(href="/assets/css/style.css", rel='stylesheet')
+    script(src="/assets/vendor/js/jquery-3.3.1.min.js")
+    script.
+      $(document).ready(function() {
+        // Check for click events on the navbar burger icon
+        $(".navbar-burger").click(function() {
+          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+          $(".navbar-burger").toggleClass("is-active");
+          $(".navbar-menu").toggleClass("is-active");
+        });
+      });
 
   body
-    header.section
-      div.container
-        div.columns
-          figure.column
-            img(src="#" alt="logo").logo
-        nav.column
-          ul.columns
-            li.column 
-              a(href="#").button navA
-            li.column 
-              a(href="#").button navB
-            li.column 
-              a(href="#").button navC
-            li.column
-              a(href="#").button navD
-            li.column
-              a(href="#").button navE
-            li.column
-              a(href="#").button navF
-            li.column
-              a(href="#").button navG
+    header
+      nav(role="navigation", aria-label="main navigation").navbar.header.is-fixed-top
+        div.navbar-brand
+          a(href="#")
+            figure
+              img(src="#").logo
+          a(data-target="navbarBasicExample", role="button", aria-expanded="false", aria-label="menu").navbar-burger.burger
+            span(aria-hidden="true")
+            span(aria-hidden="true")
+            span(aria-hidden="true")
+        div.navbar-menu
+          div.navbar-end
+            a.navbar-item Home
+            a.navbar-item About
+            a.navbar-item Services
+            a.navbar-item Access
+            a.navbar-item Contact
+            div.navbar-items
+              div.buttons
+                a.button.is-primary Sign up
+                a.button.is-light Log in   
 
-    section
-      section.hero.is-info.is-large
-        div.hero-body
-          div.container
-            h1.title タイトルが入ります
-            a(href='#').button 今すぐ利用開始
-            div
-              h2 キャッチコピーが入ります
-              p キャッチコピーに対する説明が入ります。キャッチコピーに対する説明が入ります。キャッチコピーに対する説明が入ります。
+
+    section.hero.is-info.is-large
+      div.hero-body
+        div.container
+          h1.title タイトルが入ります
+          a(href='#').button 今すぐ利用開始
+          div
+            h2 キャッチコピーが入ります
+            p キャッチコピーに対する説明が入ります。キャッチコピーに対する説明が入ります。キャッチコピーに対する説明が入ります。
 
     section.section
       div.container

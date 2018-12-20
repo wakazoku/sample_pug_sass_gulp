@@ -4,41 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>テストサイト</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css" rel="stylesheet">
+    <link href="/assets/vendor/css/bulma.min.css" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.3.1/js/all.js" rel="stylesheet">
     <link href="/assets/css/style.css" rel="stylesheet">
+    <script src="/assets/vendor/js/jquery-3.3.1.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        // Check for click events on the navbar burger icon
+        $(".navbar-burger").click(function() {
+          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+          $(".navbar-burger").toggleClass("is-active");
+          $(".navbar-menu").toggleClass("is-active");
+        });
+      });
+      
+    </script>
   </head>
   <body>
-    <header class="section">
-      <div class="container">
-        <div class="columns">
-          <figure class="column"><img class="logo" src="#" alt="logo"></figure>
-        </div>
-        <nav class="column">
-          <ul class="columns">
-            <li class="column"> <a class="button" href="#">navA</a></li>
-            <li class="column"> <a class="button" href="#">navB</a></li>
-            <li class="column"> <a class="button" href="#">navC</a></li>
-            <li class="column"><a class="button" href="#">navD</a></li>
-            <li class="column"><a class="button" href="#">navE</a></li>
-            <li class="column"><a class="button" href="#">navF</a></li>
-            <li class="column"><a class="button" href="#">navG</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <section>
-      <section class="hero is-info is-large">
-        <div class="hero-body">
-          <div class="container">
-            <h1 class="title">タイトルが入ります</h1><a class="button" href="#">今すぐ利用開始</a>
-            <div>
-              <h2>キャッチコピーが入ります</h2>
-              <p>キャッチコピーに対する説明が入ります。キャッチコピーに対する説明が入ります。キャッチコピーに対する説明が入ります。</p>
+    <header>
+      <nav class="navbar header is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand"><a href="#">
+            <figure><img class="logo" src="#"></figure></a><a class="navbar-burger burger" data-target="navbarBasicExample" role="button" aria-expanded="false" aria-label="menu"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></a></div>
+        <div class="navbar-menu">
+          <div class="navbar-end"><a class="navbar-item">Home</a><a class="navbar-item">About</a><a class="navbar-item">Services</a><a class="navbar-item">Access</a><a class="navbar-item">Contact</a>
+            <div class="navbar-items">
+              <div class="buttons"><a class="button is-primary">Sign up</a><a class="button is-light">Log in   </a></div>
             </div>
           </div>
         </div>
-      </section>
+      </nav>
+    </header>
+    <section class="hero is-info is-large">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">タイトルが入ります</h1><a class="button" href="#">今すぐ利用開始</a>
+          <div>
+            <h2>キャッチコピーが入ります</h2>
+            <p>キャッチコピーに対する説明が入ります。キャッチコピーに対する説明が入ります。キャッチコピーに対する説明が入ります。</p>
+          </div>
+        </div>
+      </div>
     </section>
     <section class="section">
       <div class="container">

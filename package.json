@@ -4,11 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp",
+    "watch": "browser-sync start --server './dist/' --files './dist/*' |  gulp watch"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "bulma": "^0.7.2",
     "gulp": "^4.0.0",
     "gulp-pug": "^4.0.1",
     "gulp-sass": "^4.0.2",
