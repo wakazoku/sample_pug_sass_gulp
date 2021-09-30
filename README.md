@@ -1,4 +1,4 @@
-## ▼環境構築
+## ▼ 環境構築
 
 ### 1. gulp の cli ツールをインストールする
 
@@ -6,15 +6,15 @@
 npm install --global gulp-cli
 ```
 
-### 2. npmインストールする
+### 2. npm インストールする
 
 ```bash
 npm i
 ```
 
-## ▼gulpタスク
+## ▼gulp タスク
 
-バージョン4なので基本的には公式ドキュメントを参考にされたし。  
+バージョン 4 なので基本的には公式ドキュメントを参考にされたし。  
 https://gulpjs.com/  
 ※古いバージョンの書き方だと動かないことが多い。
 
@@ -63,9 +63,9 @@ $ gulp --tasks
 [12:09:05] └── watch
 ```
 
-## ▼ローカル環境で確認
+## ▼ ローカル環境で確認
 
-Browsersyncを使う。  
+Browsersync を使う。  
 https://www.browsersync.io/
 
 ### 1. インストール
@@ -76,7 +76,7 @@ npm install -g browser-sync
 
 ### 2. 起動
 
-`dist`をルートディレクトリにし、配下のファイルをwatchするオプションをつけてBrowsersyncを起動する。
+`dist`をルートディレクトリにし、配下のファイルを watch するオプションをつけて Browsersync を起動する。
 
 ```bash
 browser-sync start --server "./dist/" --files "./dist/*"
@@ -100,8 +100,8 @@ $  browser-sync start --server "./dist/" --files "./dist/*"
 起動コマンドやオプションは下記を参考にされたし。  
 https://www.browsersync.io/docs/command-line
 
-
 ## おまけ
-Netlifyで公開してみた。  
+
+Netlify で公開してみた。  
 簡単にできるのでおすすめ  
 https://sample-pug-sass-gulp.netlify.com/
